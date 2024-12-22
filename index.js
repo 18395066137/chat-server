@@ -1,7 +1,9 @@
 const WebSocket = require('ws');
 const service = require('./data');
 
-const PORT = 8081;
+// const PORT = 8081;
+// const server = new WebSocket.Server({ port: PORT });
+const PORT = process.env.PORT || 8081;
 const server = new WebSocket.Server({ port: PORT });
 
 const SEND_TYPE_REG = '1001'; // 注册后发送用户id
